@@ -1,0 +1,27 @@
+{
+  "name": "verif-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:offgridauthor/verif-demo.git",
+  "scripts": {
+    "build": "yarn hardhat compile",
+    "deploy": "yarn hardhat run scripts/1-deploy-and-verify.js --network goerli",
+    "upgrade": "yarn hardhat run scripts/2a-propose-and-verify.js --network goerli",
+    "upgrade-admin": "yarn hardhat run scripts/2b-upgrade-and-verify.js --network goerli"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "@openzeppelin/contracts": "^4.7.3",
+    "@openzeppelin/hardhat-defender": "1.8.0-rc.1",
+    "@openzeppelin/hardhat-upgrades": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.7.0",
+    "hardhat": "^2.10.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.7.3"
+  }
+}
