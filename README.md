@@ -26,12 +26,6 @@ Example repo to demonstrate bytecode verification review feature for contract up
 2. Copy URL of build artifact and add as WORKFLOW_URL to `2a-propose-and-verify.js`
 3. Run `yarn upgrade`
 
-### Deploy Upgrade and Verify (using `upgrades` and `defender-admin`)
-
-1. Write a new implementation of the deployed contract, compile, commit and push to repository
-2. Copy URL of build artifact and add as WORKFLOW_URL to `2a-propose-and-verify.js`
-3. Run `yarn upgrade-admin`
-
 ### Automate Upgrade Proposal and Verification (using Github Actions)
 
 1. Add environment variables to Github Secrets
@@ -45,3 +39,4 @@ Example repo to demonstrate bytecode verification review feature for contract up
 - [Upgrades Repo](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [Hardhat Upgrades Plugin Documentation](https://docs.openzeppelin.com/upgrades-plugins/1.x/api-hardhat-upgrades#defender-propose-upgrade)
 - [Defender Admin Client - NPM](https://www.npmjs.com/package/defender-admin-client)
+- [Example Verification](https://github.com/OpenZeppelin/defender-client/blob/master/examples/verify-contract/index.js)
