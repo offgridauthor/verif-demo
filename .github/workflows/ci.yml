@@ -103,7 +103,7 @@ jobs:
           # URL used to reference the bytecode verification
           WORKFLOW_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           # Address of the contract to upgrade
-          ADDRESS: "0x71D923199294fA9d6e6aFe7C6Ac40dD460072a55"
+          ADDRESS: "0x4e62844fD42eCcb79D6eFe31e0ea8e5341B222C1"
           # Upgradeability owner
           OWNER: "0x6084fBE2Aa96Bb131D6Bc7Bd3BE786882cfA250F"
           # API keys to Defender

@@ -4,8 +4,8 @@ const {appendFileSync, readFileSync} = require('fs');
 
 const OWNER = '0x6084fBE2Aa96Bb131D6Bc7Bd3BE786882cfA250F';
 const NETWORK = 'goerli';
-const NAME = "VotingTokenX";
-const REPO_URL = `https://raw.githubusercontent.com/offgridauthor/verif-demo/main/artifacts/build-info/eb630641226933f2026d80993dd7569e.json`;
+const NAME = "VotingToken";
+const REPO_URL = `https://raw.githubusercontent.com/offgridauthor/verif-demo/main/artifacts/build-info/883090ada38d72771e7e5e6a1d10b7a4.json`;
 const contractABI = JSON.stringify(JSON.parse(readFileSync(`artifacts/contracts/${NAME}.sol/${NAME}.json`, 'utf8')).abi);
 
 async function main() {
