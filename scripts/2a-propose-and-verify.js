@@ -3,7 +3,7 @@ const { defender } = require('hardhat');
 // deploy v2 implementation and propose upgrade, submitting bytecode for verification
 const owner = process.env.OWNER // '0x88BECCF8F957649c7701b670BFAA7318967f7412'
 const address= process.env.ADDRESS // '0x65d6ed59533e5D89D15d4663cA6b209Bf2E8436a'
-const url = process.env.WORKFLOW_URL // 'https://raw.githubusercontent.com/offgridauthor/verification-contracts/main/artifacts/build-info/b42f250d48743104c16e746045c66dea.json'
+const url = process.env.WORKFLOW_URL 
 
 
 async function main() {
