@@ -9,19 +9,21 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20VotesUpg
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-contract VotingTokenX is Initializable, ERC20Upgradeable, PausableUpgradeable, OwnableUpgradeable, ERC20PermitUpgradeable, ERC20VotesUpgradeable, UUPSUpgradeable {
+contract VotingToken is Initializable, ERC20Upgradeable, PausableUpgradeable, OwnableUpgradeable, ERC20PermitUpgradeable, ERC20VotesUpgradeable, UUPSUpgradeable {
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();
     }
 
     function initialize() initializer public {
-        __ERC20_init("VotingTokenX", "VOT");
+        __ERC20_init("VotingToken", "VOT");
         __Pausable_init();
         __Ownable_init();
-        __ERC20Permit_init("VotingTokenX");
+        __ERC20Permit_init("VotingToken");
         __ERC20Votes_init();
         __UUPSUpgradeable_init();
+
+        _mint(msg.sender, 1000000 * 10 ** decimals());
     }
 
     function pause() public onlyOwner {
