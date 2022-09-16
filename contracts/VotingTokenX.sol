@@ -16,10 +16,10 @@ contract VotingTokenX is Initializable, ERC20Upgradeable, PausableUpgradeable, O
     }
 
     function initialize() initializer public {
-        __ERC20_init("VotingToken", "VOT");
+        __ERC20_init("VotingTokenX", "VOT");
         __Pausable_init();
         __Ownable_init();
-        __ERC20Permit_init("VotingToken");
+        __ERC20Permit_init("VotingTokenX");
         __ERC20Votes_init();
         __UUPSUpgradeable_init();
     }
