@@ -5,9 +5,8 @@
   "repository": "git@github.com:offgridauthor/verif-demo.git",
   "scripts": {
     "build": "yarn hardhat compile",
-    "deploy": "yarn hardhat run scripts/1-deploy-and-verify.js --network goerli",
-    "upgrade": "yarn hardhat run scripts/2a-propose-and-verify.js --network goerli",
-    "upgrade-admin": "yarn hardhat run scripts/2b-upgrade-and-verify.js --network goerli"
+    "deploy": "yarn hardhat run scripts/deploy-and-verify.js --network goerli",
+    "upgrade": "yarn hardhat run scripts/propose-and-verify.js --network goerli",
   },
   "keywords": [],
   "author": "",
