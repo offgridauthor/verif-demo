@@ -2,10 +2,9 @@ const { ethers , upgrades, defender} = require('hardhat');
 const {AdminClient} = require('defender-admin-client');
 const {appendFileSync, readFileSync} = require('fs');
 
-
 const NETWORK = 'goerli';
 const NAME = "VotingToken";
-const REPO_URL = `https://raw.githubusercontent.com/offgridauthor/verif-demo/main/artifacts/build-info/7982d36063befc1a373b49d60bc13432.json`; //
+const REPO_URL = `https://raw.githubusercontent.com/offgridauthor/verif-demo/main/artifacts/build-info/7982d36063befc1a373b49d60bc13432.json`; 
 const contractABI = JSON.stringify(JSON.parse(readFileSync(`artifacts/contracts/${NAME}.sol/${NAME}.json`, 'utf8')).abi);
 
 async function main() {

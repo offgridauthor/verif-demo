@@ -4,9 +4,8 @@ Example repo to demonstrate bytecode verification review feature for contract up
 
 ## Scripts
 
-- `npm deploy` - Deploy token contract, add to Defender Admin and verify bytecode
-- `npm upgrade` - Deploy token contract V2, verify bytecode and create Admin proposal for signers to review
-- `npm upgrade-admin` - Same as `npm upgrade`, using `admin-client` instead
+- `yarn deploy` - Deploy token contract, add to Defender Admin and verify bytecode
+- `yarn upgrade` - Deploy token contract V2, verify bytecode and create Admin proposal for signers to review
 
 ## Walkthrough
 
@@ -19,12 +18,6 @@ Example repo to demonstrate bytecode verification review feature for contract up
 5. Copy URL of build artifact (ie `https://raw.githubusercontent.com/offgridauthor/verification-contracts/main/artifacts/build-info/1ca3e45b97b92b131128688d9d9faf68.json`)
 6. Add ABI and URL to remote build artifact to `deploy-and-verify.js` script
 7. Run `yarn deploy`
-
-### Deploy Upgrade and Verify (using `defender-hardhat`)
-
-1. Write a new implementation of the deployed contract, compile, commit and push to repository
-2. Copy URL of build artifact and add as WORKFLOW_URL to `2a-propose-and-verify.js`
-3. Run `yarn upgrade`
 
 ### Automate Upgrade Proposal and Verification (using Github Actions)
 
