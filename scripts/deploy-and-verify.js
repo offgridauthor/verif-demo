@@ -26,16 +26,23 @@ async function main() {
   appendFileSync('.env', `\nADDRESS=${contract.address}`);
 
   // verify compilation of deployed contract
-  const verification = await defender.verifyDeploymentWithUploadedArtifact(contract.address, NAME, REPO_URL);
-  console.log(`Verified artifact with hash`, verification.providedSha256);
-  console.log('Verification result: ', verification.matchType);
-  console.log('Compilation artifact: ', verification.artifactUri);
-  console.log('Network: ', verification.contractNetwork);
-  console.log('Contract address: ', verification.contractAddress);
-  console.log('SHA256 of bytecode on chain: ', verification.onChainSha256);
-  console.log('SHA256 of provided compilation artifact: ', verification.providedSha256);
-  console.log('Compilation artifact provided by: ', verification.providedBy);
-  console.log('Last verified: ', verification.lastVerifiedAt);
+
+  let verification = await adminClient.verifyDeployment({
+    artifactUri: `${REPO_URL}`,
+    solidityFilePath: `contracts/${NAME}.sol`,
+    contractName: `${NAME}`,
+    contractAddress: `${contract.address}`,
+    contractNetwork: `${NETWORK}`,
+  });
+
+      console.log('Verification result: ', verification.matchType);
+      console.log('Compilation artifact: ', verification.artifactUri);
+      console.log('Network: ', verification.contractNetwork);
+      console.log('Contract address: ', verification.contractAddress);
+      console.log('SHA256 of bytecode on chain: ', verification.onChainSha256);
+      console.log('SHA256 of provided compilation artifact: ', verification.providedSha256);
+      console.log('Compilation artifact provided by: ', verification.providedBy);
+      console.log('Last verified: ', verification.lastVerifiedAt);
 }
 
 main().catch(console.error);
